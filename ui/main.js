@@ -26,8 +26,7 @@ button.onclick= function() {
 
 //Submit Name
 
-var nameInput=document.getElementById('name');
-var name = nameInput.value;
+
 var submit=document.getElementById('Submit_btn');
 submit.onclick=function(){
      //Create A Request
@@ -52,6 +51,8 @@ submit.onclick=function(){
             
         }
     };
+    var nameInput=document.getElementById('name');
+    var name = nameInput.value;
     //Make A Request
     request.open('GET','http://singhaniapiyush294.imad.hasura-app.io/submit-name?name='+name,true);
     request.send(null);
